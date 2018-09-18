@@ -5,3 +5,6 @@ C:\Users\Orest\source\repos\HW4\HW4\obj\Debug\HW4.csprojAssemblyReference.cache
 C:\Users\Orest\source\repos\HW4\HW4\obj\Debug\HW4.csproj.CoreCompileInputs.cache
 C:\Users\Orest\source\repos\HW4\HW4\obj\Debug\HW4.exe
 C:\Users\Orest\source\repos\HW4\HW4\obj\Debug\HW4.pdb
+C:\Users\Orest\source\repos\HW4\HW4\bin\Debug\StreamJsonRpc.dll
+C:\Users\Orest\source\repos\HW4\HW4\bin\Debug\ru\StreamJsonRpc.resources.dll
+C:\Users\Orest\source\repos\HW4\HW4\obj\Debug\HW4.csproj.CopyComplete
