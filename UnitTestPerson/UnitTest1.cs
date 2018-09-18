@@ -60,7 +60,8 @@ namespace UnitTestPerson
         {
             //Arrange
             string name = "Olia";
-            int expected = 19;
+            int expected;
+            expected = (DateTime.Now.Year) - 1999;
             //Act
 
             Person actual = new Person(name, DateTime.ParseExact("1999", "yyyy", null));
