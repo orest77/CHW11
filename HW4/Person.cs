@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
-
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace HW4
 {
@@ -75,7 +75,7 @@ namespace HW4
             return !(first == second);
         }
 
-        public void SaveInXmlFormat(string fileName)
+        public void SaveInXmlFormat (string fileName)
         {          
             XmlSerializer xmlFormat = new XmlSerializer(typeof(Person),
                 new Type[] { typeof(Person) });
@@ -85,7 +85,8 @@ namespace HW4
             }
             Console.WriteLine("--> Save object in XML-format");
         }
-        public void SaveInJsonFormat(string jsfileName)
+
+        public void SaveInJsonFormat ( string jsfileName )
         {
             DataContractJsonSerializer JsonFormat = new DataContractJsonSerializer(typeof(Person),
                 new Type[] { typeof(Person) });
@@ -95,5 +96,16 @@ namespace HW4
             }
             Console.WriteLine("--> Save object in JSON-format");
         }
+
+        public void SaveBinaryFormat(string fileName)
+        {
+            BinaryFormatter binFormat = new BinaryFormatter();
+            using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                binFormat.Serialize(fStream, this);
+            }
+            Console.WriteLine("--> Сохранение объекта в Binary format");
+        }
+            
     }
 }

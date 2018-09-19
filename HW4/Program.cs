@@ -17,13 +17,13 @@ namespace HW4
 
             #region
             //try
-            ////{
-            ////    for (int i = 0; i < person.Length; i++)
-            ////    {
-            ////        Person pers = new Person();
-            ////        pers.Input();
-            ////        person[i] = pers;
-            ////    }
+            //{
+            //    for (int i = 0; i < person.Length; i++)
+            //    {
+            //        Person pers = new Person();
+            //        pers.Input();
+            //        person[i] = pers;
+            //    }
             //}
             //catch (FormatException a)
             //{
@@ -46,8 +46,8 @@ namespace HW4
             //    {
             //        if (a == i) continue;
             //        if (person[i].Name == person[a].Name)
-            //        {                        
-            //            Console.Write($"The persons with the same names :");                        
+            //        {
+            //            Console.Write($"The persons with the same names :");
             //            person[i].Output();
             //        }
 
@@ -56,12 +56,13 @@ namespace HW4
 
             //}
             #endregion
+
             Person persi = new Person("Olena", DateTime.ParseExact("1994", "yyyy", null));
          
             persi.SaveInXmlFormat("person.xml");
 
             persi.SaveInJsonFormat("Person.json");
-
+            persi.SaveBinaryFormat("person,dat");
 
             Console.ReadKey();
         }
